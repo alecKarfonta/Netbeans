@@ -25,8 +25,7 @@ public class ImageTools {
 
         // set the first color
         colorCounts.add(new MyColor(image.getRGB(x, startY)));
-        for (int y = startY + skip; y < image.getHeight(); y += skip) {
-            
+        for (int y = startY; y < image.getHeight(); y += skip) {
             for (int index = 0; index < colorCounts.size(); index++ ) {
                 if (colorCounts.get(index).getColor() == image.getRGB(x, y)) {
                     colorCounts.get(index).increment();
@@ -199,8 +198,7 @@ public class ImageTools {
         DataBufferByte data   = (DataBufferByte) raster.getDataBuffer();
         return ( data.getData() );
     }
-    
-    
+   
     public static int compareImages(BufferedImage image1, BufferedImage image2) {
         // make the images the same size
         BufferedImage resizedImage2 = resizeImage(image2, image1.getWidth(), image1.getHeight(), true);

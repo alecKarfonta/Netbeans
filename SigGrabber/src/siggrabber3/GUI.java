@@ -203,8 +203,7 @@ public class GUI extends javax.swing.JFrame {
             }
         }
     }
-    
-    
+        
     public void openCheck(JLabel label) { 
         try {
             // open a new file chooser dialog and store it's return value
@@ -236,6 +235,9 @@ public class GUI extends javax.swing.JFrame {
                 || image.getHeight() > label.getHeight()) {
             label.setText(null);
             label.setIcon(new ImageIcon(ImageTools.resizeImage(image, label.getWidth(), label.getHeight(), true)));
+        } else {
+            label.setText(null);
+            label.setIcon(new ImageIcon(image));
         }
     }
     
@@ -286,7 +288,6 @@ public class GUI extends javax.swing.JFrame {
         
         for (int x = 0; (x < minSize) && (x < travColorMatches.length); x++) {
             for (int y = 0; y < 5; y++ ) {
-                
                 if (ImageTools.isColorMatch(hist.get(x).getColor(), travHist.get(y).getColor(), colorRange)) {
                     travColorMatches[x] = true;
                 } 
@@ -345,7 +346,7 @@ public class GUI extends javax.swing.JFrame {
         jbGetHistogram = new javax.swing.JButton();
         jbOpenSourceImage1 = new javax.swing.JButton();
         jbCompareHistograms1 = new javax.swing.JButton();
-        jbSaveTravellersHistogram1 = new javax.swing.JButton();
+        jbSaveTravelersHistogram1 = new javax.swing.JButton();
         jbShowStockTravellersImage1 = new javax.swing.JButton();
         jbShowStockStandardImage1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -612,8 +613,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jbSaveTravellersHistogram1.setText("Save As Travellers Histogram");
-        jbSaveTravellersHistogram1.addActionListener(new java.awt.event.ActionListener() {
+        jbSaveTravelersHistogram1.setText("Save As Travelers Histogram");
+        jbSaveTravelersHistogram1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbSaveTravellersHistogramActionPerformed(evt);
             }
@@ -663,7 +664,7 @@ public class GUI extends javax.swing.JFrame {
                 .add(18, 18, 18)
                 .add(jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.TRAILING)
                     .add(jbSaveStandardHistogram1)
-                    .add(jbSaveTravellersHistogram1))
+                    .add(jbSaveTravelersHistogram1))
                 .add(jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel6Layout.createSequentialGroup()
                         .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
@@ -682,7 +683,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel6Layout.linkSize(new java.awt.Component[] {jbCompareHistograms1, jbGetHistogram, jbLoadStandardHistogram, jbLoadTravHistogram, jbOpenSourceImage1, jbSaveStandardHistogram1, jbSaveTravellersHistogram1, jbShowStockTravellersImage1}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
+        jPanel6Layout.linkSize(new java.awt.Component[] {jbCompareHistograms1, jbGetHistogram, jbLoadStandardHistogram, jbLoadTravHistogram, jbOpenSourceImage1, jbSaveStandardHistogram1, jbSaveTravelersHistogram1, jbShowStockTravellersImage1}, org.jdesktop.layout.GroupLayout.HORIZONTAL);
 
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -691,7 +692,7 @@ public class GUI extends javax.swing.JFrame {
                 .add(jPanel6Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
                     .add(jbOpenSourceImage1)
                     .add(jbShowStockTravellersImage1)
-                    .add(jbSaveTravellersHistogram1)
+                    .add(jbSaveTravelersHistogram1)
                     .add(jbShowStockStandardImage1)
                     .add(jLabel4))
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
@@ -705,7 +706,7 @@ public class GUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel6Layout.linkSize(new java.awt.Component[] {jbCompareHistograms1, jbGetHistogram, jbOpenSourceImage1, jbSaveTravellersHistogram1, jbShowStockTravellersImage1}, org.jdesktop.layout.GroupLayout.VERTICAL);
+        jPanel6Layout.linkSize(new java.awt.Component[] {jbCompareHistograms1, jbGetHistogram, jbOpenSourceImage1, jbSaveTravelersHistogram1, jbShowStockTravellersImage1}, org.jdesktop.layout.GroupLayout.VERTICAL);
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -903,7 +904,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton jbLoadTravHistogram;
     private javax.swing.JButton jbOpenSourceImage1;
     private javax.swing.JButton jbSaveStandardHistogram1;
-    private javax.swing.JButton jbSaveTravellersHistogram1;
+    private javax.swing.JButton jbSaveTravelersHistogram1;
     private javax.swing.JButton jbShowStockStandardImage1;
     private javax.swing.JButton jbShowStockTravellersImage1;
     private javax.swing.JLabel jlSourceColor1;

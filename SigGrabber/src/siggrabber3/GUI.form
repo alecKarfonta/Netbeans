@@ -545,7 +545,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jbSaveStandardHistogram1" linkSize="3" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbSaveTravellersHistogram1" linkSize="3" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbSaveTravelersHistogram1" linkSize="3" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
@@ -578,7 +578,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jbOpenSourceImage1" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jbShowStockTravellersImage1" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jbSaveTravellersHistogram1" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbSaveTravelersHistogram1" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jbShowStockStandardImage1" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -630,9 +630,9 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbCompareHistogramsActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jbSaveTravellersHistogram1">
+        <Component class="javax.swing.JButton" name="jbSaveTravelersHistogram1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Save As Travellers Histogram"/>
+            <Property name="text" type="java.lang.String" value="Save As Travelers Histogram"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbSaveTravellersHistogramActionPerformed"/>
